@@ -1,0 +1,38 @@
+.formTitle {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+.formContent {
+  border-radius: 10px;
+  color: black;
+  padding: 20px 50px;
+  text-align: center;
+  background-color: white;
+}
+
+.formContent input {
+  background: #ddd;
+  border-radius: 40px;
+  height: 50px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  transition: 0.2s;
+}
+.formContent input:hover {
+  width: 85%;
+  border-radius: 10px;
+}
+.formContent input:focus {
+  width: 85%;
+  border-radius: 10px;
+}
+.formImg {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.formImg img {
+  width: 150px;
+}
