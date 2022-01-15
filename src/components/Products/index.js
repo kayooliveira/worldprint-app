@@ -1,10 +1,16 @@
 import React from "react";
-
 import * as B from "react-bootstrap";
+import styles from "./index.module.css";
 
-const Products = ({ products }) => {
+const Products = ({ products, title }) => {
   return (
     <B.Row>
+      {title && (
+        <div className={styles.productTitle}>
+          <h2>{title}</h2>
+        </div>
+      )}
+
       {products &&
         products.map((product, key) => {
           return (
@@ -13,7 +19,7 @@ const Products = ({ products }) => {
                 <h4>{product.name}</h4>
                 <hr />
                 <p>{product.description}</p>
-                <p>{product.price}</p>
+                <p>R$ {product.price}</p>
                 <B.Button className="btn btn-success">Adquirir</B.Button>
               </div>
             </B.Col>

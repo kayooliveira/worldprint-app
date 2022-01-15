@@ -1,0 +1,8 @@
+.productTitle {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: rgba(0, 20, 77, 0.4);
+}

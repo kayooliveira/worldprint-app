@@ -1,19 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import api from "../../../services/api";
-
 import Form from "./Form";
-
-import StoreContext from "../../../store/Context";
-
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const FormLogin = () => {
   const initialState = { email: "", password: "" };
 
   const navigate = useNavigate();
 
-  const { token, setToken } = useContext(StoreContext);
+  const { token, setToken } = useAuth();
 
   // REDIRECIONA O USUÁRIO CASO ELE JÁ TENHA UM TOKEN SALVO
 

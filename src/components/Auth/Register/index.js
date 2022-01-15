@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Form from "./Form";
 
 import api from "../../../services/api";
-import StoreContext from "../../../store/Context";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Register = () => {
   const [fields, setFields] = useState({ email: "", password: "", name: "" });
 
-  const { token, setToken } = useContext(StoreContext);
+  const { token, setToken } = useAuth();
 
   const navigate = useNavigate();
 

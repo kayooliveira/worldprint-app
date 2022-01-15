@@ -3,6 +3,7 @@
   color: black;
   margin-bottom: 20px;
 }
+
 .formContent {
   border-radius: 10px;
   color: black;
@@ -30,9 +31,5 @@
 }
 .formImg {
   text-align: center;
-  margin-bottom: 10px;
-}
-
-.formImg img {
-  width: 150px;
+  width: 250px;
 }

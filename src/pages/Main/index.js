@@ -1,25 +1,19 @@
-import { useContext, useEffect } from "react";
-
+import { useEffect } from "react";
 import * as B from "react-bootstrap";
-
 import { Link } from "react-router-dom";
-
 import Products from "../../components/Products";
-
 import api from "../../services/api";
-
 import useStorage from "../../utils/useStorage";
-
-import StoreContext from "../../store/Context";
-
+import useAuth from "../../hooks/useAuth";
 const Main = () => {
-  const { token, user, handleLogout } = useContext(StoreContext);
+  const { token, user, handleLogout } = useAuth();
+
   const [products, setProducts] = useStorage("products");
 
   useEffect(() => {
     (async () => {
       await api.get("/sanctum/csrf-cookie").then(() => {
-        api.get("/produtos").then((response) => setProducts(response.data));
+        api.get("/api/produtos").then((response) => setProducts(response.data));
       });
     })();
   }, [setProducts]);
@@ -28,10 +22,8 @@ const Main = () => {
     <>
       <B.Container className="d-flex vh-100">
         <div className="m-auto align-self-center text-center">
-          <h1>Página Inicial</h1>
           {token && <h3>Seu Token: {token}</h3>}
           {user && <h3>Seu Nome: {user.name}</h3>}
-          <hr />
           <div className="text-center">
             <Link
               to="/login"
@@ -51,9 +43,7 @@ const Main = () => {
               Logout
             </B.Button>
           </div>
-          <hr />
-
-          <Products products={products} />
+          <Products products={products} title="Produtos em destaque" />
         </div>
       </B.Container>
     </>

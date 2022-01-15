@@ -12,9 +12,9 @@ const Form = ({ fields, handleChange, handleSubmit }) => {
     <B.Container className={styles.FormLogin + " d-flex vh-100"}>
       <B.Form className="m-auto align-self-center">
         <div className={styles.formContent}>
-          <img src={logo} width="100px" alt="logo" />
+          <img className={styles.formImg} src={logo} alt="logo" />
           <hr />
-          <h1 className={styles.formTitle}>WORLDPRINT | LOGIN</h1>
+          <h1 className={styles.formTitle}>Login</h1>
 
           <B.FormGroup className="mb-3" controlId="formEmail">
             <B.FormLabel>Email/Usuário</B.FormLabel>
@@ -42,6 +42,7 @@ const Form = ({ fields, handleChange, handleSubmit }) => {
               name="password"
               value={fields.password}
               placeholder="Digite a sua senha"
+              autoComplete="true"
             />
             <span className="error">
               {/* {hasValidation() && errors.password && errors.password} */}

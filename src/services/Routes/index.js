@@ -1,5 +1,8 @@
-import React, { useContext } from "react";
-
+import React from "react";
+import Main from "../../pages/Main";
+import * as Auth from "../../components/Auth";
+import useAuth from "../../hooks/useAuth";
+import { AuthProvider } from "../../Context/Auth";
 import {
   BrowserRouter as Router,
   Routes as Switch,
@@ -8,25 +11,15 @@ import {
   Outlet,
 } from "react-router-dom";
 
-import Main from "../../pages/Main";
-
-import * as Auth from "../../components/Auth";
-
-import StoreProvider from "../../store/Provider";
-
-import StoreContext from "../../store/Context";
-
-import api from "../api";
-
 const PrivateWrapper = () => {
-  const { token } = useContext(StoreContext);
+  const { token } = useAuth();
   return token ? <Outlet /> : <Navigate to="/login" replace />;
 };
 
 const Routes = () => {
   return (
     <Router>
-      <StoreProvider>
+      <AuthProvider>
         <Switch>
           <Route path="/" element={<PrivateWrapper />}>
             <Route index element={<Main />} />
@@ -34,7 +27,7 @@ const Routes = () => {
           <Route path="/login" element={<Auth.Login />} />
           <Route path="/register" element={<Auth.Register />} />
         </Switch>
-      </StoreProvider>
+      </AuthProvider>
     </Router>
   );
 };

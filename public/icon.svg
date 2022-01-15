@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64 Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="122px" height="154px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 26.82 33.86"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:#672282;stroke-width:0.44;stroke-miterlimit:22.9256}
+    .str1 {stroke:#672282;stroke-width:0.52;stroke-miterlimit:22.9256}
+    .fil0 {fill:#672282}
+    .fil1 {fill:#672282;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0 str0" d="M0.22 0.22l26.38 0 0 33.42 -26.38 0 0 -33.42zm0.35 0.22l25.68 0 0 32.98 -25.68 0 0 -32.98z"/>
+  <polygon class="fil1 str1" points="2.86,3.36 2.86,30.5 18.44,30.5 18.44,26.6 6.77,26.6 6.77,3.36 "/>
+  <polygon class="fil1 str1" points="23.96,30.5 23.96,3.36 8.39,3.36 8.39,7.26 20.05,7.26 20.05,30.5 "/>
+ </g>
+</svg>
